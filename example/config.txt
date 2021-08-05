@@ -1,0 +1,2 @@
+Prefix plugins/SPLSDA/example
+Plugin SPLSDA inputfile parameters.txt outputfile splsda.csv
