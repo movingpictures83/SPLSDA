@@ -80,6 +80,8 @@ output <- function(outputfile) {
    y <- plotIndiv(plsda.metabolite, ellipse=TRUE, legend=TRUE)
    write.csv(y$df, outputfile)
    perf.plsda <- perf(plsda.metabolite, validation="Mfold", folds=5, progressBar=FALSE, auc=TRUE, nrepeat=10)
+   #print(str(perf.plsda))
+   print(perf.plsda$error.rate$overall)
    plot(perf.plsda, col=color.mixo(1:3), sd=TRUE, ylim=c(0,1), legend.position="horizontal")
   #plotIndiv(plsda.metabolite, ind.names = F,
   #        add.legend =TRUE, plot.ellipse = TRUE,
